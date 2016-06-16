@@ -8,4 +8,7 @@
 	<section class="page sorts" id="sorts-page">
 		<h1>Sorts</h1>
 	</section>
+<<<<<<< HEAD
 <?php include('footer.php'); ?>
+=======
+>>>>>>> d62d384c6f893fb25341008785349ba5797daafc
