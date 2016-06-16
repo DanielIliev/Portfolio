@@ -5,7 +5,7 @@
 	<section class="page bio" id="bio-page">
 		<h1>Biography</h1>
 	</section>
-	<!--<section class="page sorts" id="sorts-page">
+	<section class="page sorts" id="sorts-page">
 		<h1>Sorts</h1>
-	</section>-->
+	</section>
 <?php include('footer.php'); ?>

@@ -7,12 +7,9 @@
 body {
   padding: 0;
   margin: 0 auto;
-  overflow-x: hidden;
-  background: #a9db80;
-  background: -moz-linear-gradient(top,  #a9db80 0%, #96c56f 100%);
-  background: -webkit-linear-gradient(top,  #a9db80 0%,#96c56f 100%);
-  background: linear-gradient(to bottom,  #a9db80 0%,#96c56f 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9db80', endColorstr='#96c56f',GradientType=0 );
+  background: url(https://farm4.staticflickr.com/3493/3812049362_6783d7f53b_o_d.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /*
@@ -86,42 +83,59 @@ ul.nav li.icon {
     Pages Design
 -------------------------
 */
-
-.home {
-  position: relative;
-  height: 10em;
+.home, .bio, .sorts {
+  height: 30em;
   width: 100%;
-  background: red;
-}
-.bio {
   position: relative;
-  top: 10em;
-  height: 10em;
-  width: 100%;
-  background: red;
+  background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
 }
-.sorts {
-  position: relative;
-  top: 20em;
-  height: 10em;
-  width: 100%;
-  background: red;
-}
-.home::after, .bio::before {
+.home::after {
   content: '';
   width: 100%;
   height: 100%;
-  z-index: -1;
   position: absolute;
   background: inherit;
-}
-.home::after {
+  z-index: -1;
   bottom: 0;
-  transform-origin: left bottom;
+  transform-origin: bottom left;
   transform: skewY(4deg);
+}
+.bio {
+  top: 10em;
 }
 .bio::before {
-  top: 0;
-  transform-origin: right top;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  bottom: 0;
+  transform-origin: top right;
   transform: skewY(4deg);
+}
+.bio::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  bottom: 0;
+  transform-origin: bottom right;
+  transform: skewY(-4deg);
+}
+.sorts {
+  top: 20em;
+}
+.sorts::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  transform-origin: left;
+  transform: skewY(-4deg);
 }
