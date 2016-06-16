@@ -7,7 +7,7 @@
 body {
   padding: 0;
   margin: 0 auto;
-  background: url(https://farm4.staticflickr.com/3493/3812049362_6783d7f53b_o_d.jpg) no-repeat;
+  background: url(../media/bodybackground.png) no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -18,76 +18,20 @@ body {
 -------------------------
 */
 
-ul.nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background: #a9db80;
-  background: -moz-linear-gradient(top,  #a9db80 0%, #96c56f 100%);
-  background: -webkit-linear-gradient(top,  #a9db80 0%,#96c56f 100%);
-  background: linear-gradient(to bottom,  #a9db80 0%,#96c56f 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9db80', endColorstr='#96c56f',GradientType=0 );
-}
-ul.nav li {
-  float: left;
-}
-ul.nav li a {
-  display: inline-block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  transition: 0.3s;
-  font-size: 1.063em;
-}
-ul.nav li a:hover {
-  background-color: #111;
-}
-ul.nav li.icon {
-  display: none;
-}
-@media screen and (max-width:680px) {
-  ul.nav li {
-    float: left;
-  }
-  ul.nav li:not(:first-child) {
-    display: none;
-  }
-  ul.nav li.icon {
-    float: right;
-    display: inline-block;
-  }
-}
-@media screen and (max-width:680px) {
-  ul.nav.responsive {
-    position: relative;
-  }
-  ul.nav.responsive li.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  ul.nav.responsive li {
-    float: none;
-    display: inline;
-  }
-  ul.nav.responsive li a {
-    display: block;
-    text-align: left;
-  }
-}
-
 /*
 -------------------------
     Pages Design
 -------------------------
 */
 .home, .bio, .sorts {
+  padding-top: 3.0063em;
   height: 30em;
   width: 100%;
   position: relative;
-  background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+  background-color: #BB1219;
+}
+.home {
+  top: 4.8em;
 }
 .home::after {
   content: '';
@@ -101,7 +45,7 @@ ul.nav li.icon {
   transform: skewY(4deg);
 }
 .bio {
-  top: 10em;
+  top: 20em;
 }
 .bio::before {
   content: '';
@@ -126,7 +70,7 @@ ul.nav li.icon {
   transform: skewY(-4deg);
 }
 .sorts {
-  top: 20em;
+  top: 35em;
 }
 .sorts::before {
   content: '';
@@ -138,4 +82,21 @@ ul.nav li.icon {
   top: 0;
   transform-origin: left;
   transform: skewY(-4deg);
+}
+.footer {
+  height: 6.125em;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  border-top: 1px solid #000;
+  background-color: #1E2A32;
+}
+.social-links a {
+  text-decoration: none;
+}
+.social-links {
+  float: right;
+  padding-right: 3.0063em;
+  padding-top: 2em;
 }

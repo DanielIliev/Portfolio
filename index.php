@@ -7,8 +7,18 @@
 	</section>
 	<section class="page sorts" id="sorts-page">
 		<h1>Sorts</h1>
+		<footer class="footer">
+			<div class="social-links">
+				<a href="#" role="button">
+					<img src="media/facebook.png" alt="Facebook" />
+				</a>
+				<a href="#" role="button">
+					<img src="media/googleplus.png" alt="Google Plus" />
+				</a>
+				<a href="#" role="button">
+					<img src="media/twitter.png" alt="Twitter" />
+				</a>
+			</div>
+		</footer>
 	</section>
-<<<<<<< HEAD
 <?php include('footer.php'); ?>
-=======
->>>>>>> d62d384c6f893fb25341008785349ba5797daafc

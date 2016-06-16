@@ -15,26 +15,5 @@
 	</head>
 	<body>
 		<header>
-			<ul class="nav">
-				<li>
-					<a href="#home-page">
-						Home
-					</a>
-				</li>
-				<li>
-					<a href="#bio-page">
-						Biography
-					</a>
-				</li>
-				<li>
-					<a href="#sorts-page">
-						Sorts
-					</a>
-				</li>
-				<li class="icon">
-					<a href="javascript:void(0);" onclick="myFunction()">
-						&#9776;
-					</a>
-				</li>
-			</ul>
+
 		</header>
