@@ -33,34 +33,43 @@ $(function() {
     return val;
   }
 
-  /* On scroll functionality */
+  /* On scroll page loading */
+  var timer;
   $(window).bind('DOMMouseScroll', function(e) {
-     if (e.originalEvent.detail > 0) {
+    clearTimeout(timer);
+    timer = setTimeout(function() {
+      if (e.originalEvent.detail > 0) {
         $(ids[iterator]).hide();
         iterator += 1;
         iterator = checkIteratorSize(iterator);
         $(ids[iterator]).fadeIn('slow');
-     }
-     else {
+      }
+      else {
         $(ids[iterator]).hide();
         iterator -= 1;
         iterator = checkIteratorSize(iterator);
         $(ids[iterator]).fadeIn('slow');
-     }
-  }); /* Closure of scroll function for Firefox */
+      }
+    }, 250);
+  });
+  /* Closure of scroll function for Firefox */
 
   $(window).bind('mousewheel', function(e) {
-     if (e.originalEvent.wheelDelta < 0) {
+    clearTimeout(timer);
+    timer = setTimeout(function() {
+      if (e.originalEvent.wheelDelta < 0) {
+        $(ids[iterator]).hide();
         iterator += 1;
         iterator = checkIteratorSize(iterator);
-        alert(ids[iterator]);
-     }
-     else {
+        $(ids[iterator]).fadeIn('slow');
+      }
+      else {
+        $(ids[iterator]).hide();
         iterator -= 1;
         iterator = checkIteratorSize(iterator);
-        alert(ids[iterator]);
-     }
-     return false;
+        $(ids[iterator]).fadeIn('slow');
+      }
+    }, 250);
   }); /* Closure of scroll function for other browsers */
 
 }); // Closure of main function
