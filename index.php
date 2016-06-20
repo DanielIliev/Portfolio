@@ -6,45 +6,54 @@
 	</section>
 	<section class="models" id="models-page">
 		<div class="container">
-			<h1>Models we offerModels we offerModels we offerModels we offerModels we offerModels we offerModels we offerModels we offerModels we offer</h1>
-			<h1>Models we offer</h1>
-			<h1>Models we offer</h1>
-			<h1>Models we offer</h1>
-			<h1>Models we offer</h1>
-			<h1>Models we offer</h1>
-			<h1>Models we offer</h1>
-			<h1>Models we offer</h1>
-			<h1>Models we offer</h1>
-			<h1>Models we offer</h1>
-			<h1>Models we offer</h1>
-			<h1>Models we offer</h1>
-			<h1>Models we offer</h1>
-			<h1>Models we offer</h1>
-			<h1>Models we offer</h1>
-			<h1>Models we offer</h1>
-			<h1>Models we offer</h1>
-			<h1>Models we offer</h1>
+			<h1>Models</h1>
+		</div>
+	</section>
+	<section class="about" id="about-page">
+		<div class="container">
+			<h1>Biography</h1>
+		</div>
+	</section>
+
+
+
+
+	<!--<section class="models" id="models-page">
+		<div class="container">
+			<div class="row">
+				<div class = "col-sm-12 col-md-4">
+					<div class = "thumbnail">
+						<img src = "http://searchengineland.com/figz/wp-content/seloads/2014/08/four-pandas-ss-1920.jpg" alt = "Generic placeholder thumbnail">
+					</div>
+					<div class = "caption">
+						<h3>Thumbnail label</h3>
+						<p>Some sample text. Some sample text.</p>
+					</div>
+				</div>
+				<div class = "col-sm-12 col-md-4">
+					<div class = "thumbnail">
+						<img src = "http://searchengineland.com/figz/wp-content/seloads/2014/08/four-pandas-ss-1920.jpg" alt = "Generic placeholder thumbnail">
+					</div>
+					<div class = "caption">
+						<h3>Thumbnail label</h3>
+						<p>Some sample text. Some sample text.</p>
+					</div>
+				</div>
+				<div class = "col-sm-12 col-md-4">
+					<div class = "thumbnail">
+						<img src = "http://searchengineland.com/figz/wp-content/seloads/2014/08/four-pandas-ss-1920.jpg" alt = "Generic placeholder thumbnail">
+					</div>
+					<div class = "caption">
+						<h3>Thumbnail label</h3>
+						<p>Some sample text. Some sample text.</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 	<section class="about" id="about-page">
 		<div class="container">
 			<h1>History of ToyotaHistory of ToyotaHistory of ToyotaHistory of ToyotaHistory of ToyotaHistory of Toyota</h1>
-			<h1>History of Toyota</h1>
-			<h1>History of Toyota</h1>
-			<h1>History of Toyota</h1>
-			<h1>History of Toyota</h1>
-			<h1>History of Toyota</h1>
-			<h1>History of Toyota</h1>
-			<h1>History of Toyota</h1>
-			<h1>History of Toyota</h1>
-			<h1>History of Toyota</h1>
-			<h1>History of Toyota</h1>
-			<h1>History of Toyota</h1>
-			<h1>History of Toyota</h1>
-			<h1>History of Toyota</h1>
-			<h1>History of Toyota</h1>
-			<h1>History of Toyota</h1>
-			<h1>History of Toyota</h1>
 			<br>
 			<br>
 			<br>
@@ -66,5 +75,5 @@
 				</div>
 			</div>
 		</footer>
-	</section>
+	</section>-->
 <?php include('footer.php'); ?>

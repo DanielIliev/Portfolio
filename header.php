@@ -7,9 +7,9 @@
 		<meta name="X-UA-Compatible" content="IE=edge" />
 		<meta name="robots" content="nofollow, noindex" />
 		<meta name="author" content="Daniel Iliev" />
-		<meta name="description" content="Portfolio single page website" />
+		<meta name="description" content="Single page website - Portfolio by Daniel Iliev" />
 		<!-- Title -->
-		<title>Potatoes</title>
+		<title>Portfolio</title>
 		<!-- Stylesheets -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/style.css" />
@@ -20,7 +20,7 @@
 	</head>
 	<body>
 		<header>
-			<nav class="navbar navbar-inverse navbar-fixed-top">
+			<nav class="navbar navbar-inverse">
 				<div class="container-fluid">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navMenu" aria-expanded="false">

@@ -1,4 +1,6 @@
 $(function() {
+
+  /* Smooth scroll implementation */
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -11,6 +13,8 @@ $(function() {
       }
     }
   });
+
+  /* Change class active, based on clicked button in navigation */
   $('.nav a').on('click', function() {
     var current_width = window.innerWidth;
     if (current_width < 768) {
@@ -18,19 +22,45 @@ $(function() {
       $('.navbar-toggle').click(); //bootstrap 3.x
     }
   });
-  $('#homelink a').click(function() {
-    $('#homelink').addClass('active');
-    if ($('#modelslink').hasClass('active')) $('#modelslink').removeClass('active');
-    if ($('#aboutlink').hasClass('active')) $('#aboutlink').removeClass('active');
-  });
-  $('#modelslink a').click(function() {
-    $('#modelslink').addClass('active');
-    if ($('#homelink').hasClass('active')) $('#homelink').removeClass('active');
-    if ($('#aboutlink').hasClass('active')) $('#aboutlink').removeClass('active');
-  });
-  $('#aboutlink a').click(function() {
-    $('#aboutlink').addClass('active');
-    if ($('#homelink').hasClass('active')) $('#homelink').removeClass('active');
-    if ($('#modelslink').hasClass('active')) $('#modelslink').removeClass('active');
-  });
-});
+
+  /* Pages ids for on scroll events */
+  ids = ['#home-page', '#models-page', '#about-page'];
+  iterator = 0;
+  $('#models-page, #about-page').hide();
+  function checkIteratorSize(val) {
+    if (val > ids.length - 1) val = 0;
+    if (val < 0) val = ids.length - 1;
+    return val;
+  }
+
+  /* On scroll functionality */
+  $(window).bind('DOMMouseScroll', function(e) {
+     if (e.originalEvent.detail > 0) {
+        $(ids[iterator]).hide();
+        iterator += 1;
+        iterator = checkIteratorSize(iterator);
+        $(ids[iterator]).fadeIn('slow');
+     }
+     else {
+        $(ids[iterator]).hide();
+        iterator -= 1;
+        iterator = checkIteratorSize(iterator);
+        $(ids[iterator]).fadeIn('slow');
+     }
+  }); /* Closure of scroll function for Firefox */
+
+  $(window).bind('mousewheel', function(e) {
+     if (e.originalEvent.wheelDelta < 0) {
+        iterator += 1;
+        iterator = checkIteratorSize(iterator);
+        alert(ids[iterator]);
+     }
+     else {
+        iterator -= 1;
+        iterator = checkIteratorSize(iterator);
+        alert(ids[iterator]);
+     }
+     return false;
+  }); /* Closure of scroll function for other browsers */
+
+}); // Closure of main function
