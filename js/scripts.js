@@ -26,7 +26,7 @@ $(function() {
   /* Pages ids for on scroll events */
   ids = ['#home-page', '#models-page', '#about-page', '#testimonial-page'];
   iterator = 0;
-  $('#models-page, #about-page, #testimonial-page').hide(); //Hide all pages beside home
+  $('#models-page, #about-page, #testimonial-page').hide(); //Hide all pages except home
   function checkIteratorSize(val) {
     if (val > ids.length - 1) val = 0;
     if (val < 0) val = ids.length - 1;
@@ -44,6 +44,10 @@ $(function() {
   }
 
   /* Handler for button click navigation - not done */
+  $('a[role="button"]').click(function() {
+    var btn_id = Array.join(['#', $(this).closest('li').attr('id')], ''); // Stores the id of the clicked link
+    alert(linkids.indexOf(btn_id));
+  });
 
   /* Handler for scroll navigation - Firefox */
   var timer;
@@ -67,7 +71,7 @@ $(function() {
     }, 250);
   });
 
-  /* Handler for scroll navigation - Chrome, Opera, IE */
+  /* Handler for scroll navigation - Chrome, Opera, Safari */
   $(window).bind('mousewheel', function(e) {
     clearTimeout(timer);
     timer = setTimeout(function() {
