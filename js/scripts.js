@@ -36,7 +36,6 @@ $(function() {
   /* Change active class based on current page on scroll */
   linkids = ['#homelink', '#modelslink', '#aboutlink', '#testimoniallink'];
   function changeActiveClass(curr_page) {
-    var temp = 0; // Iterator for removal of active class on all buttons
     for (temp = 0; temp < linkids.length; temp++) {
       $(linkids[temp]).removeClass('active');
     }
@@ -46,7 +45,13 @@ $(function() {
   /* Handler for button click navigation - not done */
   $('a[role="button"]').click(function() {
     var btn_id = Array.join(['#', $(this).closest('li').attr('id')], ''); // Stores the id of the clicked link
-    alert(linkids.indexOf(btn_id));
+    iterator = linkids.indexOf(btn_id);
+    changeActiveClass(iterator);
+    for (temp = 0; temp < ids.length; temp++) {
+      $(ids[temp]).hide();
+    }
+    var id_to_page = $(this).closest('li').attr('id').replace('link', ''); // Stores the class of page, corresponding to the clicked button
+    $('.' + id_to_page).fadeIn('slow');
   });
 
   /* Handler for scroll navigation - Firefox */
