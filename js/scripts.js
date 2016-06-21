@@ -14,7 +14,7 @@ $(function() {
     }
   });
 
-  /* Change class active, based on clicked button in navigation */
+  /* Hide menu on button click in mobile view */
   $('.nav a').on('click', function() {
     var current_width = window.innerWidth;
     if (current_width < 768) {
@@ -24,16 +24,28 @@ $(function() {
   });
 
   /* Pages ids for on scroll events */
-  ids = ['#home-page', '#models-page', '#about-page'];
+  ids = ['#home-page', '#models-page', '#about-page', '#testimonial-page'];
   iterator = 0;
-  $('#models-page, #about-page').hide();
+  $('#models-page, #about-page, #testimonial-page').hide(); //Hide all pages beside home
   function checkIteratorSize(val) {
     if (val > ids.length - 1) val = 0;
     if (val < 0) val = ids.length - 1;
     return val;
   }
 
-  /* On scroll page loading */
+  /* Change active class based on current page on scroll */
+  linkids = ['#homelink', '#modelslink', '#aboutlink', '#testimoniallink'];
+  function changeActiveClass(curr_page) {
+    var temp = 0; // Iterator for removal of active class on all buttons
+    for (temp = 0; temp < linkids.length; temp++) {
+      $(linkids[temp]).removeClass('active');
+    }
+    $(linkids[curr_page]).addClass('active');
+  }
+
+  /* Handler for button click navigation - not done */
+
+  /* Handler for scroll navigation - Firefox */
   var timer;
   $(window).bind('DOMMouseScroll', function(e) {
     clearTimeout(timer);
@@ -43,17 +55,19 @@ $(function() {
         iterator += 1;
         iterator = checkIteratorSize(iterator);
         $(ids[iterator]).fadeIn('slow');
+        changeActiveClass(iterator);
       }
       else {
         $(ids[iterator]).hide();
         iterator -= 1;
         iterator = checkIteratorSize(iterator);
         $(ids[iterator]).fadeIn('slow');
+        changeActiveClass(iterator);
       }
     }, 250);
   });
-  /* Closure of scroll function for Firefox */
 
+  /* Handler for scroll navigation - Chrome, Opera, IE */
   $(window).bind('mousewheel', function(e) {
     clearTimeout(timer);
     timer = setTimeout(function() {
@@ -62,14 +76,16 @@ $(function() {
         iterator += 1;
         iterator = checkIteratorSize(iterator);
         $(ids[iterator]).fadeIn('slow');
+        changeActiveClass(iterator);
       }
       else {
         $(ids[iterator]).hide();
         iterator -= 1;
         iterator = checkIteratorSize(iterator);
         $(ids[iterator]).fadeIn('slow');
+        changeActiveClass(iterator);
       }
     }, 250);
-  }); /* Closure of scroll function for other browsers */
+  });
 
 }); // Closure of main function

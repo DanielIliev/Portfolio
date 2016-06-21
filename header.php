@@ -36,13 +36,16 @@
 					<div class="navbar-right collapse navbar-collapse" id="navMenu">
 						<ul class="nav navbar-nav">
 							<li class="active" id="homelink">
-								<a href="#home-page" role="button">Home</a>
+								<a href="#" role="button">Home</a>
 							</li>
 							<li id="modelslink">
-								<a href="#models-page" role="button">Models</a>
+								<a href="#" role="button">Models</a>
 							</li>
 							<li id="aboutlink">
-								<a href="#about-page" role="button">About</a>
+								<a href="#" role="button">About</a>
+							</li>
+							<li id="testimoniallink">
+								<a href="#" role="button">Testimonials</a>
 							</li>
 						</ul>
 					</div><!-- /.navbar-collapse -->
