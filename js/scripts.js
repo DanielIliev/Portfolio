@@ -1,4 +1,4 @@
-$(function() {
+jQuery(function() {
 
   /* Smooth scroll implementation */
   $('a[href*="#"]:not([href="#"])').click(function() {
@@ -44,7 +44,7 @@ $(function() {
 
   /* Handler for button click navigation - not done */
   $('a[role="button"]').click(function() {
-    var btn_id = Array.join(['#', $(this).closest('li').attr('id')], ''); // Stores the id of the clicked link
+    var btn_id = '#' + $(this).closest('li').attr('id'); // Stores the id of the clicked link
     iterator = linkids.indexOf(btn_id);
     changeActiveClass(iterator);
     for (temp = 0; temp < ids.length; temp++) {
